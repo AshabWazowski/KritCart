@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const CardComponent = ({ image, title, btnText, url }) => {
     return (
-      <div className=" flex flex-col justify-between max-w-xl max-h-[350px] bg-white border border-gray-200 rounded-lg shadow p-2 hover:shadow-lg hover:shadow-black duration-500">
+      <div className=" flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow p-2 hover:shadow-lg hover:shadow-black duration-500">
         <Link href={`/category/${url}`}>
-          <Image src={image} className="rounded-t-lg w-full max-h-[300px]" />
+          <Image src={image} className="rounded-t-lg " />
         </Link>
         <div className=" p-1 text-center">
           <Link href={`/category/${url}`}>

@@ -24,7 +24,8 @@ const LogIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
       const response = await loginValidate(formData);
-      console.log(response.userData);
+      console.log(response);
+      if(response.message){alert(response.message);}
       // Reset form after submission
       setFormData({ email: "", password: "" });      
       dispatch(loggedInUser(response.token));      
