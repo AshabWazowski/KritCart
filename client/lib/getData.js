@@ -24,10 +24,10 @@ export async function getFilteredProduts(endpoint) {
   }
 }
 
-export const addWishlistData = async (endpoint, id) => {
+export const addWishlistData = async (endpoint, wishlist, userId) => {
   try {
     const response = await axios(endpoint, {
-      body: { id: id },
+      body: { uid: userId, wishlist:wishlist },
     });
     return response;
   } catch (error) {

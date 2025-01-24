@@ -31,9 +31,8 @@ const LogIn = () => {
       dispatch(userData(response.userData));      
   };
   return (
-    <div className='w-full h-full flex justify-center items-center'>
-
-    <div className='w-[30%] h-[40%] flex flex-col justify-between items-center px-2 py-2 rounded gap-6 bg-white mt-16'>
+    <div className='flex justify-center items-center py-[10%]'>
+    <div className='w-[90%] h-[40%] flex flex-col justify-between items-center py-4 rounded-xl gap-6 bg-[#f6f6f6] tablet:w-[50%]'>
     <h3 className='text-black text-2xl font-bold'>Log In</h3>
     <div className='w-[100%]'>
         <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center gap-4'>
@@ -41,7 +40,7 @@ const LogIn = () => {
         type="text"
         name="email"
         placeholder="Enter your Email"
-        className="w-[80%] border py-1 px-1 text-black"
+        className="w-[80%] border py-1 px-1 text-black "
         required
         value={formData.email}
         onChange={handleChange}

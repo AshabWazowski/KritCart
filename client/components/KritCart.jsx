@@ -6,13 +6,13 @@ import TopCollection from './TopCollection'
 import Footer from './Footer'
 
 const KritCart = () => {
+  // <Footer/>
   return (
     <div>
     <CarouselComponent/>
     <CategoryComponent/>
     <TopCollection/>
       {/*<HomePage/>*/}
-    <Footer/>
     </div>
   )
 }

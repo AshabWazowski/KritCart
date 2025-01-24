@@ -588,14 +588,14 @@ export const productsDemo = [
 export const categoriesData = [
     {
         id:1,
-        title: "Men Apperal",
+        title: "Men",
         image:men,
         btnText:"Shop Now",
         url:'men'
     },
     {
         id:2,
-        title: "Women Apperal",
+        title: "Women",
         image:women,
         btnText:"Shop Now",
         url:'women'

@@ -10,6 +10,9 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Cart() {
   const dispatch = useDispatch();
   const cartValues = useSelector((state)=>state.cartReducer.cartValue);
+  const user = useSelector((state)=>state.cartReducer.user);
+  const token = useSelector((state)=>state.cartReducer.token);
+  console.log(cartValues);
   
 
 
@@ -31,11 +34,13 @@ export default function Cart() {
     // handleSummaryTotal()
   }
   const subTotal = cartValues.reduce((acc , item)=> (acc + item.price*item.qty), 0).toFixed(2)
-  
   return (
     <div className="px-20 py-16">
       <Breadcrumb />
-      <div className="grid grid-cols-12 gap-14">
+      <div className="grid grid-cols-1 gap-14 tablet:grid-cols-12">
+     
+     
+      {/* CART ITEMS */}
         <div className="col-span-8">
           <h2 className="py-2 mb-6 text-2xl">Your Cart</h2>
           <div className="flex items-center justify-between border-b border-slate-400 text-slate-400 pb-3 font-semibold text-sm mb-4">
@@ -51,7 +56,7 @@ export default function Cart() {
               {/*IMAGE and TITLE*/}
                 <div className="flex items-center gap-3">
                   <Image
-                    src={item.img}
+                    src={item.img[0]}
                     width={249}
                     height={249}
                     alt="Alt text"
@@ -97,7 +102,7 @@ export default function Cart() {
 
 
         {/* CART TOTAL */}
-        <div className="col-span-4 h-auto sm:block bg-white border border-gray-300 rounded-lg  dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden hidden p-5 dark:text-slate-100 font-bold">
+        <div className="col-span-6 tablet:col-span-4 h-auto sm:block bg-[#f4f4f4] border border-gray-300 rounded-lg  dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden p-5 dark:text-slate-100 font-bold">
           <h2 className="text-2xl pb-3">Cart total</h2>
 <div className="border-b border-slate-500 pb-4">
           {cartValues.map((item)=>(
@@ -122,9 +127,9 @@ export default function Cart() {
             <span>${subTotal === 0 ? 0 : subTotal}</span>
           </div>
           <Link
-            href={cartValues.length > 0 ? "/checkout" : '#'}
+            href={cartValues.length > 0 && token !== ''? "/checkout" : '/login'}
             className="bg-slate-200 text-slate-900 rounded-lg py-2 px-4 font-normal mt-24"
-            onClick={cartValues.length > 0 ? handleSuccessClearCart : ''}
+            onClick={cartValues.length > 0 ? handleSuccessClearCart : null}
           >
             Continue to Payment
           </Link>

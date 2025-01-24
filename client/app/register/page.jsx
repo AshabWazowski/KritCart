@@ -27,11 +27,11 @@ const Registration = () => {
      await registerValidate(formData);
        setFormData({ firstName: "",lastName:'', email: "", password: "" });      
       //  Navigating to Login
-        router.push("/");     
+        router.push("/login");     
   };
   return (
-    <div className="w-full h-full flex justify-center items-center">
-      <div className="w-[30%] h-[50%] flex flex-col justify-between items-center px-2 py-2 rounded gap-6 bg-white mt-16">
+    <div className="flex justify-center items-center py-[10%]">
+      <div className="w-[90%] h-[50%] flex flex-col justify-between items-center px-2 py-2 rounded gap-6 bg-[#f6f6f6] tablet:w-[50%]">
         <h3 className="text-black text-2xl font-bold">Registration</h3>
         <div className="w-[100%]">
           <form

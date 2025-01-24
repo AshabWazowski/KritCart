@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import Providers from '@/redux/slices/Providers'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,10 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>      
-      <Providers>
-      <Navbar/>
+    <body>      
+    <Providers>
+    <Navbar/>
         {children}
+        <Footer/>
       </Providers>
       </body>
     </html>
