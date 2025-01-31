@@ -1,5 +1,5 @@
 import express from "express";
-import { category, getSortedData } from "../controllers/dataControllers.js";
+import { allProductData, category, getSortedData } from "../controllers/dataControllers.js";
 
 const router = express.Router();
 
@@ -21,5 +21,5 @@ router.get("/category/:categoryName/sort/:sortField/:sortOrder", getSortedData);
 }
 
 
-router.post("/wishlist", )
+router.get("/all", allProductData);
 export default router;

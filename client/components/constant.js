@@ -1,8 +1,8 @@
-import men from "@/public/assets/men.png"
-import women from "@/public/assets/women.png"
-import accessories from "@/public/assets/accessories.png"
-import footwear from "@/public/assets/footwear.png"
-import electronics from "@/public/assets/electronics.png"
+// import men from "@/public/assets/men.png"
+// import women from "@/public/assets/women.png"
+// import accessories from "@/public/assets/accessories.png"
+// import footwear from "@/public/assets/footwear.png"
+// import electronics from "@/public/assets/electronics.png"
 
 
 
@@ -589,35 +589,35 @@ export const categoriesData = [
     {
         id:1,
         title: "Men",
-        image:men,
+        // image:men,
         btnText:"Shop Now",
         url:'men'
     },
     {
         id:2,
         title: "Women",
-        image:women,
+        // image:women,
         btnText:"Shop Now",
         url:'women'
     },
     {
         id:3,
         title: "Accessories",
-        image:accessories,
+        // image:accessories,
         btnText:"Shop Now",
         url:'accessories'
     },
     {
         id:4,
         title: "Footwear",
-        image:footwear,
+        // image:footwear,
         btnText:"Shop Now",
         url:'footwear',
     },
     {
         id:5,
         title: "Electronics",
-        image:electronics,
+        // image:electronics,
         btnText:"Shop Now",
         url:'electronics'
     },

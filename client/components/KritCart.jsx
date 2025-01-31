@@ -1,5 +1,4 @@
 import React from 'react'
-import HomePage from './HomePage'
 import CarouselComponent from '@/sharedComponent/CarouselComponent'
 import CategoryComponent from './CategoryComponent'
 import TopCollection from './TopCollection'
@@ -12,7 +11,6 @@ const KritCart = () => {
     <CarouselComponent/>
     <CategoryComponent/>
     <TopCollection/>
-      {/*<HomePage/>*/}
     </div>
   )
 }

@@ -65,3 +65,12 @@ export const getWishlistData = async (req, res) =>{
 
 
 }
+
+
+export const allProductData = async (req, res) =>{
+    try{
+       res.status(200).json(Products);
+    }catch(error){
+        res.status(404).json({message:error.message});
+    }
+}
