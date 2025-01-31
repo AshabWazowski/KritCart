@@ -1,5 +1,5 @@
 import React from "react";
-// import collection from "@/public/assets/collection.png";
+import collection from "@/public/assets/collection.png";
 import Image from "next/image";
 
 const TopCollection = () => {
@@ -12,7 +12,7 @@ const TopCollection = () => {
       </div>
 
       <div className="relative w-full px-4 mt-8 overflow-x-hidden tablet:mt-8">
-        <Image src={""} alt="new" className="w-full rounded-3xl" />
+        <Image src={collection} alt="new" className="w-full rounded-3xl" />
         <div className="absolute top-0 w-full min-h-full flex justify-center items-center flex-col gap-2">
         <h1 className="text-3xl text-white font-semibold tablet:text-[4rem]">Shop for Latest Collection</h1>
         <p className="text-white font-semibold tablet:text-3xl p-2">
